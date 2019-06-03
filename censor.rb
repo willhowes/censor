@@ -3,9 +3,10 @@ def censor(array)
   array.each do |phrase|
     banned_phrases.each do |x|
       if phrase.include?(x)
-        puts "This phrase should be censored: #{phrase}"
+        phrase.sub! x, 'CENSORED'
       end
     end
+    puts phrase
   end
 end
 
